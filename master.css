@@ -1,0 +1,202 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1.2;
+    height: 100%;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+:root{
+    /* --------------------------------colors-------------------*/
+    --Dark-cyan: hsl(158, 36%, 37%);
+    --Cream: hsl(30, 38%, 92%);
+    --white: hsl(0, 0%, 100%);
+    --Very-dark-blue: hsl(212, 21%, 14%);
+    --Dark-grayish-blue: hsl(228, 12%, 48%);
+    /*-------------typographie----------------------------------*/
+    --fz-400:1rem;
+    --fw-500:500;
+    --fw-700:700;
+	--ff-Montserrat: 'Montserrat' ;
+	--ff-Fraunces: 'Fraunces';
+
+	--btn-hover-:hsla(159, 55%, 15%, 0.9);
+	--btn-active-:hsla(160, 47%, 34%, 0.9);
+}
+body{
+	background-color: var(--Cream);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 1.5rem 1rem;
+	min-height: 100vh
+}
+
+img{
+    max-width: 100%;
+	border-radius: 15px 15px 0 0;
+}
+
+.product{
+	display: grid;
+	row-gap: 28px;
+	background-color: white;
+	border-radius: 15px ;
+	padding-bottom: 20px;
+}
+.cardDescription{
+	display: grid;
+	grid-template-rows: repeat(5,auto);
+	row-gap: 1.5rem ;
+	padding-inline: 1.5rem;
+
+}
+.product__categorie{
+	font-family: var(--ff-Montserrat);
+	letter-spacing: 5px;	
+	text-transform: uppercase;
+	font-size: .8765rem;
+	color: var(--Dark-grayish-blue);
+	font-weight: var(--fw-500);
+}
+.product__title{
+	font-family: var(--ff-Fraunces);
+	font-size: 2rem;
+	font-weight: var(--fw-700);
+	color: var(--Very-dark-blue);
+
+}
+.product__description{
+	font-family: var(--ff-Montserrat);
+	font-size: .94rem;
+	color: var(--Dark-grayish-blue);	
+	font-weight: var(--fw-500);
+	line-height: 1.8;
+	
+}
+.card__Price{
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+}
+.desktop{
+	display: none;
+}
+.product__price{
+	font-size: 2rem;
+	font-family: var(--ff-Fraunces);
+	color: var(--Dark-cyan);
+	font-weight: var(--fw-700);
+}
+.product__original-price{
+	font-family: var(--ff-Montserrat);
+	text-decoration: line-through;
+	color: var(--Dark-grayish-blue);
+	font-size: .94rem;
+	font-weight: var(--fw-500);
+}
+button{
+	background-color: var(--Dark-cyan);
+	color: var(--white);
+	font-family: var(--ff-Montserrat);
+	font-weight: var(--fw-500);
+	border: none;
+	padding: 1rem 0;
+	border-radius: 8px;
+	transition: all 0.3s ease;
+}
+button a ,i{
+	
+	text-decoration: none;
+
+	font-size: 1rem;
+}
+
+button:hover{
+	color: var(--white);
+	background-color: var(--btn-hover-);
+}
+button:active{
+	background-color: var(--btn-active-);
+}
+
+
+
+
+@media ( width > 43.75em){
+	.product{
+		grid-template-columns: repeat(2,1fr);
+		padding-bottom: 0;
+		width: 56.25em;
+	}
+	.product__title{
+		font-size: 3rem
+		;
+	}
+	.product__categorie{
+		font-size: 1.2rem;
+	}
+	.product__description{
+		font-size: 1.2rem;
+	}
+	img{
+		border-radius: 15px 0 0 15px;
+	}	
+	.mobile{
+		display: none;
+	}
+	.desktop{
+		display: block;
+	}
+
+	.cardDescription{
+		display: grid;
+		grid-template-rows: repeat(6,auto);
+		row-gap: 1.5rem ;
+		padding: 1.5rem;
+
+	}
+	.product__price{
+		font-size: 2.5em;
+	}
+	.product__original-price{
+		font-size: 1.2em;
+	}
+}
