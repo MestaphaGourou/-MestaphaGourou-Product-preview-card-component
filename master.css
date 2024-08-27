@@ -65,7 +65,7 @@ body{
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	padding: 1.5rem 1rem;
+	padding: 0 1rem;
 	min-height: 100vh
 }
 
@@ -178,6 +178,7 @@ button:active{
 	}
 	img{
 		border-radius: 15px 0 0 15px;
+		height: 100%;
 	}	
 	.mobile{
 		display: none;
